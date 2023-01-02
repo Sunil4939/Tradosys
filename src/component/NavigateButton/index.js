@@ -1,0 +1,69 @@
+import React from "react";
+import { Text, TouchableOpacity, StyleSheet, Dimensions, View, Image } from "react-native";
+import { COLORS, icons } from "../../constants";
+const { width, height } = Dimensions.get('window')
+
+const NavigateButton = ({ title, subtitle, icon, iconStyle, onPress, }) => {
+    return (
+        <TouchableOpacity style={styles.buttons} onPress={onPress}>
+            <View style={styles.iconBox}>
+                <Image source={icon} style={[styles.icons, iconStyle]} resizeMode="contain" />
+            </View>
+            <View style={styles.textBox}>
+                <Text style={styles.labels}>{title}</Text>
+                {subtitle &&
+                    <Text style={styles.subtitle}>{subtitle}</Text>
+                }
+            </View>
+        </TouchableOpacity>
+    )
+}
+
+
+export {
+    NavigateButton,
+}
+
+const styles = StyleSheet.create({
+
+    buttons: {
+        flexDirection: 'row',
+        paddingVertical: height * .01,
+        marginTop: height * .012,
+        marginHorizontal: width * .03,
+    },
+    iconBox: {
+        width: width * .1,
+        height: height * .05,
+        backgroundColor: '#F6F6F6',
+        borderRadius: 8,
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginRight: width * .03,
+    },
+    labels: {
+        fontFamily: 'Poppins SemiBold 600',
+        fontSize: 14,
+        lineHeight: 18,
+        color: COLORS.black2,
+    },
+    subtitle: {
+        fontFamily: 'Poppins Regular 400',
+        fontSize: 12,
+        lineHeight: 14,
+        color: COLORS.black,
+        marginTop: 2,
+    },
+    icons: {
+        width: width * .06,
+        height: height * .03,
+    },
+   
+    textBox: {
+        width: width * .8,
+        borderBottomWidth: 1,
+        borderBottomColor: '#E8E8E8',
+        paddingBottom: height * .02,
+    },
+
+})
