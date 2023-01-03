@@ -55,7 +55,7 @@ const Verification = ({ navigation }) => {
                     </View>
                 </View>
                 <ButtonComponent title="Submit"
-                    onPress={() => navigation.navigate('BottomTabNavigator')}
+                    // onPress={() => navigation.navigate('BottomTabNavigator')}
                     style={styles.submitBtn} />
             </KeyboardAwareScrollView>
         </ScrollView>

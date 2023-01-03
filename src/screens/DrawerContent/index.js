@@ -14,7 +14,7 @@ const DrawerContent = ({navigation}) => {
                 <View style={styles.rightBox}>
                     <View style={styles.row}>
                         <Text style={styles.name}>Adom Shafi</Text>
-                        <View>
+                        <View style={styles.rightArrowBox}>
                             <Image source={icons.rightArrow} style={styles.rightArrow} resizeMode="contain" />
                         </View>
                     </View>

@@ -14,8 +14,8 @@ const { width, height } = Dimensions.get('window')
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 
-const Root = ({navigation}) => {
-    const [token, setToken] = useState('juikkn')
+const Root = () => {
+    const [token, setToken] = useState('sdfaada')
     return (
         <>
             {token === null ?
@@ -41,7 +41,7 @@ const Root = ({navigation}) => {
                         })}
                     />
                      <Stack.Screen name="RegisterPage" component={RegisterPage}
-                        options={() => ({
+                        options={({navigation}) => ({
                             headerTitle: "",
                             headerStyle: styles.headerStyle,
                             headerLeft: () => (

@@ -42,6 +42,11 @@ export default StyleSheet.create({
         width: width * .05,
         height: height * .025,
     },
+    whiteLeft: {
+        width: width * .05,
+        height: height * .025,
+        tintColor:COLORS.white,
+    },
     headerBtn: {
         // borderWidth:1,
         width: width * .1,

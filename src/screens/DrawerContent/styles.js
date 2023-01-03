@@ -19,8 +19,10 @@ export default StyleSheet.create({
     rightArrow: {
         width: width * .04,
         height: height * .02,
+    },
+    rightArrowBox: {
+        marginLeft: width * .04,
         marginBottom: 4,
-        marginRight:  -3,
     },
     profileBtn: {
         flexDirection: 'row',
@@ -30,15 +32,12 @@ export default StyleSheet.create({
         // backgroundColor: COLORS.blue2,
     },
     row: {
-        width: width * .48,
         flexDirection: 'row',
-        justifyContent: 'space-between',
         alignItems: 'center',
     },
     rightBox: {
-        width: width * .48,
         marginTop: height * .01,
-        marginLeft: width * .06,
+        marginLeft: width * .03,
     },
     name: {
         fontFamily: 'Poppins Medium 500',

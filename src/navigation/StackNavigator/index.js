@@ -26,7 +26,7 @@ import Doctors from '../../screens/Doctors';
 const Stack = createStackNavigator();
 
 const HomeStack = () => {
-
+ 
   return (
     <Stack.Navigator initialRouteName='HomePage'>
       <Stack.Screen name="HomePage" component={HomePage}
@@ -56,8 +56,8 @@ const HomeStack = () => {
           headerTitle: "Business India",
           headerTitleStyle: styles.headerTitle,
           headerLeft: () => (
-            <TouchableOpacity onPress={() => navigation.openDrawer()}>
-              <Image style={styles.menu} source={icons.menu} resizeMode="contain" />
+            <TouchableOpacity style={styles.headerBtn} onPress={() => navigation.goBack()}>
+              <Image style={styles.whiteLeft} source={icons.back} resizeMode="contain" />
             </TouchableOpacity>
           ),
           headerRight: () => (
@@ -80,8 +80,8 @@ const HomeStack = () => {
           headerTitle: "Notifications",
           headerTitleStyle: styles.headerTitle,
           headerLeft: () => (
-            <TouchableOpacity onPress={() => navigation.openDrawer()}>
-              <Image style={styles.menu} source={icons.menu} resizeMode="contain" />
+            <TouchableOpacity style={styles.headerBtn} onPress={() => navigation.goBack()}>
+              <Image style={styles.whiteLeft} source={icons.back} resizeMode="contain" />
             </TouchableOpacity>
           ),
 
@@ -108,8 +108,8 @@ const HomeStack = () => {
           headerTitle: "Business India",
           headerTitleStyle: styles.headerTitle,
           headerLeft: () => (
-            <TouchableOpacity onPress={() => navigation.openDrawer()}>
-              <Image style={styles.menu} source={icons.menu} resizeMode="contain" />
+            <TouchableOpacity style={styles.headerBtn} onPress={() => navigation.goBack()}>
+              <Image style={styles.whiteLeft} source={icons.back} resizeMode="contain" />
             </TouchableOpacity>
           ),
           headerRight: () => (
@@ -123,6 +123,32 @@ const HomeStack = () => {
         options={({navigation}) => ({
           headerTitleAlign: 'center',
           headerTitle: "App FeedBack",
+          headerTitleStyle: styles.headerTitle1,
+          headerLeft: () => (
+            <TouchableOpacity style={styles.headerBtn} onPress={() => navigation.goBack()}>
+              <Image style={styles.back} source={icons.back} resizeMode="contain" />
+            </TouchableOpacity>
+          ),
+
+        })}
+      />
+        <Stack.Screen name="Bugs" component={Bugs}
+        options={({navigation}) => ({
+          headerTitleAlign: 'center',
+          headerTitle: "Report a Bug ",
+          headerTitleStyle: styles.headerTitle1,
+          headerLeft: () => (
+            <TouchableOpacity style={styles.headerBtn} onPress={() => navigation.goBack()}>
+              <Image style={styles.back} source={icons.back} resizeMode="contain" />
+            </TouchableOpacity>
+          ),
+
+        })}
+      />
+       <Stack.Screen name="Features" component={Features}
+        options={({navigation}) => ({
+          headerTitleAlign: 'center',
+          headerTitle: "Suggest an App Feature",
           headerTitleStyle: styles.headerTitle1,
           headerLeft: () => (
             <TouchableOpacity style={styles.headerBtn} onPress={() => navigation.goBack()}>
@@ -302,45 +328,14 @@ const AddPostStack = () => {
           headerTitleAlign: 'center',
           headerTitle: "Status",
           headerTitleStyle: styles.headerTitle1,
-          headerLeft: () => (
-            <TouchableOpacity style={styles.headerBtn} onPress={() => navigation.goBack()}>
-              <Image style={styles.back} source={icons.back} resizeMode="contain" />
-            </TouchableOpacity>
-          ),
           headerRight: () => (
             <TouchableOpacity style={styles.postBtn}>
               <Text style={styles.post}>POST</Text>
             </TouchableOpacity>
           ),
-
         })}
       />
-       <Stack.Screen name="Bugs" component={Bugs}
-        options={({navigation}) => ({
-          headerTitleAlign: 'center',
-          headerTitle: "Report a Bug ",
-          headerTitleStyle: styles.headerTitle1,
-          headerLeft: () => (
-            <TouchableOpacity style={styles.headerBtn} onPress={() => navigation.goBack()}>
-              <Image style={styles.back} source={icons.back} resizeMode="contain" />
-            </TouchableOpacity>
-          ),
-
-        })}
-      />
-       <Stack.Screen name="Features" component={Features}
-        options={({navigation}) => ({
-          headerTitleAlign: 'center',
-          headerTitle: "Suggest an App Feature",
-          headerTitleStyle: styles.headerTitle1,
-          headerLeft: () => (
-            <TouchableOpacity style={styles.headerBtn} onPress={() => navigation.goBack()}>
-              <Image style={styles.back} source={icons.back} resizeMode="contain" />
-            </TouchableOpacity>
-          ),
-
-        })}
-      />
+     
         <Stack.Screen name="Doctors" component={Doctors}
         options={({navigation}) => ({
           headerTitleAlign: 'center',

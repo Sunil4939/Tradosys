@@ -14,12 +14,14 @@ const AppFeedBack = ({ navigation }) => {
                 title={'Report a bug'}
                 subtitle={'Please let us know about the issue'}
                 icon={icons.warning}
+                onPress={()=> navigation.navigate('Bugs')}
                 />
                  <FeedBackButton 
                 title={'Suggest an app feature'}
                 subtitle={'Help us get better, let us know your feedback'}
                 icon={icons.suggestion}
                 // iconStyle={styles.suggestion}
+                onPress={()=> navigation.navigate('Features')}
                 />
             </View>
       <ButtonComponent 
